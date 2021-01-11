@@ -15,7 +15,8 @@ class Main extends Component {
             this.setState({[e.target.name]:e.target.value})
         }
         else{
-            this.setState({message:"Its Empty Fill Me",text:""})
+            this.setState({message:"Its Empty Fill Me",[e.target.name]:""})
+            console.log(e.target.value)
         }
     }
     SendToListData=()=>{

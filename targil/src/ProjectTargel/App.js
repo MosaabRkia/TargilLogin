@@ -21,9 +21,11 @@ export default class App extends Component {
   }
 
   GetDataFromChild = async(tittle,dec,id) => {
-    let tempNotes = [...this.state.notes, {tittle:tittle,description:dec,id:parseInt(id)}];
-    console.log(tempNotes)
-    await this.setState({ notes: tempNotes });
+    if(tittle !== null && tittle !== "" && dec !== null && dec != "")
+    {
+      let tempNotes = [...this.state.notes, {tittle:tittle,description:dec,id:parseInt(id)}];
+      await this.setState({ notes: tempNotes });
+    }
   };
   
 
@@ -52,10 +54,16 @@ export default class App extends Component {
           </Route>
 
           <Route exact path="/Main">
+          <Link to="/">
+                <button>Logout</button>
+              </Link>
             <Main GetDataFromChild={this.GetDataFromChild} />
           </Route>
 
           <Route exact path="/Notes">
+          <Link to="/">
+                <button>Logout</button>
+              </Link>
             <Note 
             notes={this.state.notes}
             RemoveNote={this.RemoveNote} />
