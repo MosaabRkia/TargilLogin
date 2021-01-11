@@ -24,7 +24,7 @@ class Main extends Component {
              this.setState({message:"added",id:this.state.id+1})
         }
         else{
-            this.setState({message:"Ops SomeThing Wrong Try Again"})
+            this.setState({message:"Ops SomeThing Wrong Try Again",tittle:null,description:null})
         }
        
     }
