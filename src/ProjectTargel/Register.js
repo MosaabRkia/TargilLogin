@@ -5,9 +5,9 @@ class Register extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      email: null,
-      password: null,
-      passwordCon: null,
+      email: "",
+      password: "",
+      passwordCon: "",
       message: "Please Fill All",
       registered: "",
     };
@@ -94,7 +94,7 @@ class Register extends Component {
         />
         <br />
       
-          <button className="btn btn-dark align-items-center" onClick={this.onclickevent}>register</button>
+          <button className="btn btn-light" onClick={this.onclickevent}>register</button>
          
         <br />
       

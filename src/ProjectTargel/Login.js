@@ -40,12 +40,12 @@ class Login extends Component {
                <h3> {this.state.message}</h3>
                <br/>
                 <input className="form-control" placeholder="Enter Email" name="email" type="text" onChange={this.onChangeE} />
-                <small  id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                <small  id="emailHelp" class="form-text ">We'll never share your email with anyone else.</small>
                 
                 <input className="form-control" placeholder="Enter Password" name="password" type="password" onChange={this.onChangeE}/>
-                <small  id="emailHelp" class="form-text text-muted">We'll never share your password with anyone else.</small>
+                <small  id="emailHelp" class="form-text ">We'll never share your password with anyone else.</small>
               
-                <button className="btn btn-primary" onClick={this.onLogin}>Login</button>
+                <button className="btn btn-light" onClick={this.onLogin}>Login</button>
            
                 
                 <br/>

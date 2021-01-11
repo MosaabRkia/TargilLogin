@@ -4,6 +4,7 @@ import Login from "./Login";
 import Register from "./Register";
 import Main from "./Main";
 import Note from "./Note";
+import './ProjectCss.css'
 
 export default class App extends Component {
   constructor(props) {
@@ -21,7 +22,7 @@ export default class App extends Component {
   }
 
   GetDataFromChild = async(tittle,dec,id) => {
-    if(tittle !== null && tittle !== "" && dec !== null && dec != "")
+    if(tittle !== null && tittle !== "" && dec !== null && dec !== "")
     {
       let tempNotes = [...this.state.notes, {tittle:tittle,description:dec,id:parseInt(id)}];
       await this.setState({ notes: tempNotes });
@@ -51,6 +52,9 @@ export default class App extends Component {
 
           <Route exact path="/Register">
             <Register SendDataToParent={this.SendDataToParent} />
+            <Link to="/">
+                <p className="container"> Click Here To Login Page ...</p>
+              </Link>
           </Route>
 
           <Route exact path="/Main">

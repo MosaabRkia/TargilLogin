@@ -34,7 +34,7 @@ class Main extends Component {
         return (
             <div className="container">
                           <Link to="/">
-                <button className="btn btn-dark">Logout</button>
+                <button className="btn btn-danger">Logout</button>
               </Link>
                 <h1>Add to List</h1><br/>
                 <input  className="form-control" name="tittle" onChange={this.ChangeText} type="text" placeholder="Enter Tittle" /><br/>
