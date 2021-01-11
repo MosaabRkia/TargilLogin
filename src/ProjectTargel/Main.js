@@ -33,6 +33,9 @@ class Main extends Component {
     render() {
         return (
             <div className="container">
+                          <Link to="/">
+                <button className="btn btn-dark">Logout</button>
+              </Link>
                 <h1>Add to List</h1><br/>
                 <input  className="form-control" name="tittle" onChange={this.ChangeText} type="text" placeholder="Enter Tittle" /><br/>
                 <input  className="form-control" name="description" onChange={this.ChangeText} type="text" placeholder="Enter Description" /><br/>

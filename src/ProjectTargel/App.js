@@ -54,16 +54,10 @@ export default class App extends Component {
           </Route>
 
           <Route exact path="/Main">
-          <Link to="/">
-                <button className="btn btn-dark">Logout</button>
-              </Link>
             <Main GetDataFromChild={this.GetDataFromChild} />
           </Route>
 
           <Route exact path="/Notes">
-          <Link to="/">
-                <button className="btn btn-dark">Logout</button>
-              </Link>
             <Note 
             notes={this.state.notes}
             RemoveNote={this.RemoveNote} />

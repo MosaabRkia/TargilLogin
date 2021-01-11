@@ -1,9 +1,12 @@
 import React from 'react'
-import { withRouter } from 'react-router-dom'
+import {Link, withRouter } from 'react-router-dom'
 
 function Note(props) {   
     return (
         <div className="container">
+                      <Link to="/">
+                <button className="btn btn-dark">Logout</button>
+              </Link>
             <ul style={{maxWidth:"100vh"}} className="list-group">
          <h1>  Notes List </h1>
          {props.notes.map((note)=>{
