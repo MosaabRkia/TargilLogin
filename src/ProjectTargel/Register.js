@@ -54,8 +54,10 @@ class Register extends Component {
     else if(!(this.validateEmail(this.state.email))){
       this.setState({
         message: "email's not correct !! "});
-        
     }
+    else if(this.state.password.length < 8){
+      this.setState({message:"Please Enter Password More Or Equal to 8 Charactors"})
+     }
     else{
       this.setState({
         message: "Something Wrong !! "});
